@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Map</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="sideNavbar">
+        <button id="menuIcon">☰</button>
+        <ul>
+            <li id="auth">
+                <i class="fa-regular fa-user"></i>
+                <a href="#login" id="loginBtn">Login</a>
+                <div id="userInfo" style="display: none;">
+                    <span id="username">Divakar</span>
+                    <!-- <a href="#logout" id="logoutBtn">Logout</a> -->
+                </div>
+            </li>
+
+            <li><a href="#home"><i class="fa-solid fa-house"></i><span> Home</span></a></li>
+            <li><a href="#history"><i class="fa-solid fa-clock-rotate-left"></i><span> History</span></a></li>
+            <li><a href="#feedback"><i class="fa-solid fa-comments"></i><span> Feedback</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div id="mainContent">
+        <!-- Home Page -->
+        <section id="home" class="content-section page-container">
+            <div class="image-container" style="text-align: center;">
+                <img src="img.jpg" alt="Engineering Courses" style="width: 8rem; height: 10rem; margin-top:20px;">
+            </div>
+            <h1>Engineering Courses</h1>
+            <div class="course-category">
+                <h2>Subjects</h2>
+                <div class="subjects container">
+                    <button class="subject-btn" onclick="navigateToSubtopics('DBMS')">DBMS</button>
+                    <button class="subject-btn" onclick="navigateToSubtopics('FLAT')">FLAT</button>
+                    <button class="subject-btn" onclick="navigateToSubtopics('DLC')">DLC</button>
+                    <button class="subject-btn" onclick="navigateToSubtopics('Software Engineering')">Software Engineering</button>
+                    <button class="subject-btn" onclick="navigateToSubtopics('Data Structures')">Data Structures</button>
+                    <button class="subject-btn" onclick="navigateToSubtopics('BEEE')">BEEE</button>
+                </div>
+            </div>
+            <div class="course-category">
+                <h2>Tech Fields</h2>
+                <div class="subjects container">
+                    <button class="subject-btn" onclick="navigateToSubtopics('Web Development')">Web Development</button>
+                    <button class="subject-btn" onclick="navigateToSubtopics('Cybersecurity')">Cybersecurity</button>
+                    <button class="subject-btn" onclick="navigateToSubtopics('AIML')">AI & ML</button>
+                    <button class="subject-btn" onclick="navigateToSubtopics('Cloud Computing')">Cloud Computing</button>
+                    <button class="subject-btn" onclick="navigateToSubtopics('Data Science')">Data Science</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sub-topics Section -->
+        <section id="subtopics" class="content-section" style="display:none;">
+            <button id="backBtn" onclick="goBack()">🔙 Back</button>
+            <h2>Subtopics</h2>
+            <div id="subtopic-list"></div>
+        </section>
+
+        <!-- History Page -->
+        <section id="history" class="content-section">
+            <h2>Recently Viewed Courses</h2>
+            <ul id="history-list" class="history-list"></ul>
+        </section>
+
+        <!-- Feedback Section -->
+        <section id="feedback" class="content-section">
+            <h2>Feedback</h2>
+            <form id="feedbackForm">
+                <label for="feedbackInput">Your Feedback:</label>
+                <textarea id="feedbackInput" placeholder="Enter your feedback here"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

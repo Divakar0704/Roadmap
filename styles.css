@@ -1,0 +1,249 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f8f8f8; */
+    background: linear-gradient(to right, #e0eafc, #cfdef3); /* Light blue gradient */
+    font-family: 'Arial', sans-serif;
+}
+
+#sideNavbar {
+    width: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: width 0.5s ease;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#sideNavbar ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#sideNavbar ul li {
+    margin: 20px 0;
+    margin-bottom: 50px;
+}
+
+#sideNavbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#menuIcon {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+#sideNavbar.shrink {
+    width: 250px;
+}
+
+#mainContent {
+    margin-left: 70px;
+    transition: margin-left 0.5s ease;
+}
+
+#sideNavbar.shrink ~ #mainContent {
+    margin-left: 270px;
+}
+/* Container for buttons */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* Footer margin */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Add padding to the entire page */
+.page-container {
+    padding: 40px;
+}
+
+.content-section {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+h2 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+button{
+    background-color: #6200ea; /* Vivid Purple */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #3700b3; /* Darker Purple */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px); /* Lift up slightly */
+}
+
+/* Course buttons styling */
+.course-category {
+    margin-bottom: 40px;
+}
+
+.subjects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.subject-btn {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 15px;
+}
+
+.subject-btn:hover {
+    background-color: #3700b3;
+    transform: scale(1.1);
+}
+
+/* Subtopics section */
+#subtopics {
+    display: none;
+}
+
+#subtopics h2 {
+    margin-left: 35px;
+    margin-bottom: 10px; /* Added margin for left alignment */
+}
+
+#subtopic-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start; /* Left align */
+    margin-left: 100px; /* Margin for subtopics list */
+}
+
+.sub-topic-btn {
+    background-color: #6200ea;
+    color: white;
+    padding: 12px 20px;
+    cursor: pointer;
+    margin-bottom: 15px; /* Add more space below each button */
+    border-radius: 12px;
+    white-space: nowrap; 
+}
+
+.sub-topic-content {
+    display: none;
+    background-color: #f1f1f1;
+    padding: 12px;
+    border-radius: 10px;
+    position: absolute; 
+    left: 320px;
+    font-size: 14px; /* Reduce font size for better readability */
+    width: 300px; /* Set width so the content wraps properly */
+    top: 0; /* Align vertically with the button */
+    margin-left: 20px;
+    word-wrap: break-word; /* Allow the description to wrap and prevent overlap */
+}
+
+.sub-topic-content p {
+    margin: 0;
+}
+
+/* History section */
+.history-list {
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0;
+}
+
+.history-list li {
+    margin-bottom: 10px;
+}
+
+/* Back button */
+#backBtn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Feedback form */
+#feedbackForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+}
+
+#feedbackInput {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#feedbackForm button {
+    padding: 10px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#feedbackForm button:hover {
+    background-color: #3700b3;
+}
